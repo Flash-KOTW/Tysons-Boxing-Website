@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Tysons City Boxing — Walk in awkward. Walk out dangerous.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ========== NAV ========== -->
+<nav class="top">
+  <div class="nav-inner">
+    <a class="logo" href="#top" aria-label="Tysons City Boxing">
+      <span class="logo-mark"></span>
+      <span class="logo-word">Tysons City Boxing</span>
+    </a>
+    <div class="nav-links" id="navLinks">
+      <a href="classes.html">Classes</a>
+      <a href="why-us.html">Why Us</a>
+      <a href="reviews.html">Reviews</a>
+      <a href="coaches.html">Coaches</a>
+      <a href="pricing.html">Pricing</a>
+      <a class="nav-cta" href="#book">TRY A CLASS</a>
+    </div>
+    <button class="menu-btn" id="menuBtn" aria-label="Menu">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero" id="top">
+  <video class="hero-video" autoplay muted loop playsinline webkit-playsinline preload="auto" poster="uploads/tcb-1.webp" aria-hidden="true">
+    <source src="uploads/boxing-broll.mp4" type="video/mp4">
+  </video>
+  <div class="hero-bg"></div>
+  <div class="hero-glow"></div>
+  <div class="container hero-inner">
+    <h1 class="hero-h1 display">
+      Train like a fighter<br>
+      Built for<br>
+      <span class="accent rotator"><span style="--i:0">everyone</span><span style="--i:1">fighters</span><span style="--i:2">family</span><span style="--i:3">you</span></span>
+    </h1>
+    <p class="hero-sub">
+      Build confidence <span class="dot-sep">·</span> Torch calories <span class="dot-sep">·</span> Throw real hands
+    </p>
+    <div class="hero-ctas">
+      <a class="btn-primary" href="#book">
+        TRY A CLASS
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TICKER ========== -->
+<div class="ticker">
+  <div class="ticker-track">
+    <span class="ticker-item">Outwork everyone</span>
+    <span class="ticker-item">Outlast everyone</span>
+    <span class="ticker-item">Real fighters · Real form</span>
+    <span class="ticker-item">Month-to-month</span>
+    <span class="ticker-item">First class free</span>
+    <span class="ticker-item">Outwork everyone</span>
+    <span class="ticker-item">Outlast everyone</span>
+    <span class="ticker-item">Real fighters · Real form</span>
+    <span class="ticker-item">Month-to-month</span>
+    <span class="ticker-item">First class free</span>
+  </div>
+</div>
+
+<!-- ========== PROGRAMS ========== -->
+<section class="section programs" id="classes">
+  <div class="container">
+    <div class="programs-grid">
+      <article class="program">
+        <a class="program-img" href="boxing.html" aria-label="Boxing">
+          <span class="placeholder-label">BOXING IMAGE</span>
+        </a>
+        <h3>Boxing</h3>
+        <p>Stance, footwork, combinations, defense. Beginner to sparring-ready — taught by fighters with real ring time.</p>
+        <a class="btn-pill" href="boxing.html">Learn More</a>
+      </article>
+
+      <article class="program">
+        <a class="program-img" href="muay-thai.html" aria-label="Muay Thai &amp; Kickboxing">
+          <span class="placeholder-label">MUAY THAI IMAGE</span>
+        </a>
+        <h3>Muay Thai &amp; Kickboxing</h3>
+        <p>Pad work, kicks, knees, elbows, clinch. Authentic technique from a former pro Muay Thai fighter with 60+ fights.</p>
+        <a class="btn-pill" href="muay-thai.html">Learn More</a>
+      </article>
+
+      <article class="program">
+        <a class="program-img" href="conditioning.html" aria-label="Conditioning">
+          <span class="placeholder-label">CONDITIONING IMAGE</span>
+        </a>
+        <h3>Conditioning</h3>
+        <p>Strength, endurance, and a gas tank built for fighters. Sandbags, kettlebells, sleds, intervals — real fighter conditioning.</p>
+        <a class="btn-pill" href="conditioning.html">Learn More</a>
+      </article>
+
+      <article class="program">
+        <a class="program-img" href="personal-training.html" aria-label="Personal Training">
+          <span class="placeholder-label">PERSONAL TRAINING IMAGE</span>
+        </a>
+        <h3>Personal Training</h3>
+        <p>1-on-1 with a fighter. You set the goal — weight loss, fight prep, athletic edge — we build the path.</p>
+        <a class="btn-pill" href="personal-training.html">Learn More</a>
+      </article>
+    </div>
+  </div>
+</section>
+<!-- ========== STATS ========== -->
+<section class="stats">
+  <div class="container">
+    <div class="stats-grid">
+      <div class="stat">
+        <div class="num display"><span class="accent">85+</span></div>
+        <div class="label">Combined fights between our coaches</div>
+      </div>
+      <div class="stat">
+        <div class="num display"><span class="accent">5.0</span></div>
+        <div class="label">Average rating across Google reviews</div>
+      </div>
+      <div class="stat">
+        <div class="num display"><span class="accent">15+</span></div>
+        <div class="label">Years training fighters in Tysons</div>
+      </div>
+      <div class="stat">
+        <div class="num display"><span class="accent">6</span></div>
+        <div class="label">Days a week, drop-in classes available</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TESTIMONIALS ========== -->
+<section class="testimonials" id="testimonials">
+  <div class="container">
+    <div class="section-head">
+      <div>
+        <div class="label mono">— Receipts</div>
+      </div>
+      <div>
+        <h2 class="display">Don't take our<br>word for it.<br><span class="accent">Take theirs.</span></h2>
+        <p class="lead" style="margin-top: 32px;">Verified Google reviews from real members. We don't pay for testimonials. We earn them.</p>
+      </div>
+    </div>
+  </div>
+  <div class="testimonial-marquee" id="testimonialMarquee">
+    <div class="testimonial-track" id="testimonialTrack">
+      <!-- Original set -->
+      <article class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>
+          "Dean and Mike are excellent trainers. <em>I have never been to a gym where the trainers try very hard to get the best out of me.</em> The workouts are intense and all trainers pay attention to detail that allow you to improve your form and get in the best shape of your life."
+        </blockquote>
+        <div class="testimonial-author">
+          <div class="avatar">ZH</div>
+          <div>
+            <div class="name">Zubair Hamidi</div>
+            <div class="meta">2–4 classes / week · Member since '25</div>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>
+          "Quality of instruction <em>second to none.</em> There's something for everyone here. Tyson's City Boxing is a great place to get a workout in and to meet active people. No contract required — drop in for a class for just $25 and you get a free pair of hand wraps."
+        </blockquote>
+        <div class="testimonial-author">
+          <div class="avatar">PM</div>
+          <div>
+            <div class="name">Patrick McGartland</div>
+            <div class="meta">4-year member</div>
+          </div>
+        </div>
+      </article>
+      <article class="testimonial">
+        <div class="stars">★★★★★</div>
+        <blockquote>
+          "Love this place and the people. Warm, inviting camaraderie so I really felt at ease. <em>The workouts are tough — it's a true full-body workout</em> but since every class is different it's always fun and new. If you're new to boxing or experienced, you'll feel at home here."
+        </blockquote>
+        <div class="testimonial-author">
+          <div class="avatar">EK</div>
+          <div>
+            <div class="name">Esabel Khoury</div>
+            <div class="meta">Returning boxer</div>
+          </div>
+        </div>
+      </article>
+    </div>
+    <div class="google-link-bar">
+      <div class="left">
+        <span class="g-logo">G</span>
+        <div class="rating">
+          <span class="stars-mini">★★★★★</span>
+          <span>5.0 · Verified Google Reviews</span>
+        </div>
+      </div>
+      <a class="read-all" href="https://www.google.com/search?q=Tysons+City+Boxing+Vienna+VA+reviews" target="_blank" rel="noopener">
+        Read every review on Google
+        <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+
+<!-- ========== FOOTER ========== -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a class="logo" href="#top">
+          <span class="logo-mark"></span>
+          </a>
+        <p>Boxing, Muay Thai, and conditioning taught by real fighters.<br><br>8501 2-A Tyco Road<br>Vienna, VA 22182<br><span style="color: var(--fg-dim); font-size: 13px;">Located in the commercial plaza next to Papa John's. Parking out front.</span></p>
+      </div>
+      <div class="footer-col">
+        <h5>Hours</h5>
+        <ul class="hours-list">
+          <li><span>Mon</span><span>6:30a – 8:00p</span></li>
+          <li><span>Tue</span><span>11:30a – 8:00p</span></li>
+          <li><span>Wed</span><span>6:30a – 8:00p</span></li>
+          <li><span>Thu</span><span>11:30a – 8:00p</span></li>
+          <li><span>Fri</span><span>6:30a – 7:00p</span></li>
+          <li><span>Sat</span><span>8:00a – 1:30p</span></li>
+          <li class="closed"><span>Sun</span><span>Closed</span></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Train</h5>
+        <ul>
+          <li><a href="classes.html">Classes</a></li>
+          <li><a href="coaches.html">Coaches</a></li>
+          <li><a href="pricing.html">Pricing</a></li>
+          <li><a href="#book">Book free class</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5>Contact</h5>
+        <ul>
+          <li><a href="tel:7039425006">703-942-5006</a></li>
+          <li><a href="mailto:dburr@tysonsboxing.com">dburr@tysonsboxing.com</a></li>
+          <li><a href="https://maps.google.com/?q=8501+Tyco+Road+Vienna+VA" target="_blank" rel="noopener">Get directions →</a></li>
+          <li><a href="#book">Book free class →</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2026 Tysons City Boxing · All rights reserved</div>
+      <div class="social">
+        <a href="#" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="#" aria-label="YouTube">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"/><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"/></svg>
+        </a>
+        <a href="#" aria-label="TikTok">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.84a8.16 8.16 0 0 0 4.77 1.52V6.93a4.85 4.85 0 0 1-1.84-.24z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ========== TWEAKS PANEL ========== -->
+<div id="tweaks-root"></div>
+
+<script type="text/babel" data-presets="env,react">
+  const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+    "accentHue": 28,
+    "accentChroma": 0.22,
+    "headlineSize": 100,
+    "displayFont": "Anton",
+    "bodyFont": "Inter",
+    "bgMode": "near-black",
+    "heroHeadline": "Train like a fighter\nBuilt for\n{everyone|fighters|family|you}",
+    "heroSub": "Build confidence · Torch calories · Throw real hands",
+    "ctaText": "TRY A CLASS",
+    "urgencyText": "Now booking new members · Vienna, VA",
+    "showTicker": true,
+    "showAudiences": true,
+    "showStats": true,
+    "tickerSpeed": 30
+  }/*EDITMODE-END*/;
+
+  const BG_MODES = {
+    "near-black": { bg: "#0A0A0A", bg2: "#131313", bg3: "#1c1c1c", fg: "#F5F0E8", fgDim: "#9a958e", line: "rgba(245, 240, 232, 0.12)" },
+    "deep-charcoal": { bg: "#141312", bg2: "#1c1b19", bg3: "#252320", fg: "#F5F0E8", fgDim: "#9a958e", line: "rgba(245, 240, 232, 0.10)" },
+    "ink-blue": { bg: "#0A0E14", bg2: "#121821", bg3: "#1a2230", fg: "#F0EFEC", fgDim: "#8b9099", line: "rgba(240, 239, 236, 0.10)" }
+  };
+
+  const FONT_FAMILIES = {
+    "Anton": "'Anton', 'Impact', sans-serif",
+    "Bebas Neue": "'Bebas Neue', 'Impact', sans-serif",
+    "Oswald": "'Oswald', sans-serif",
+    "Inter": "'Inter', system-ui, sans-serif",
+    "Space Grotesk": "'Space Grotesk', system-ui, sans-serif",
+    "IBM Plex Sans": "'IBM Plex Sans', system-ui, sans-serif"
+  };
+
+  // dynamically load extra google fonts
+  const extraFontHref = "https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;700&family=Space+Grotesk:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap";
+  const extraFontLink = document.createElement('link');
+  extraFontLink.rel = 'stylesheet';
+  extraFontLink.href = extraFontHref;
+  document.head.appendChild(extraFontLink);
+
+  function App() {
+    const [t, setTweak] = useTweaks(TWEAK_DEFAULTS);
+
+    React.useEffect(() => {
+      const r = document.documentElement.style;
+      const mode = BG_MODES[t.bgMode] || BG_MODES["near-black"];
+      r.setProperty('--bg', mode.bg);
+      r.setProperty('--bg-2', mode.bg2);
+      r.setProperty('--bg-3', mode.bg3);
+      r.setProperty('--fg', mode.fg);
+      r.setProperty('--fg-dim', mode.fgDim);
+      r.setProperty('--line', mode.line);
+      r.setProperty('--accent', `oklch(0.65 ${t.accentChroma} ${t.accentHue})`);
+      r.setProperty('--accent-hot', `oklch(0.72 ${Math.min(0.26, t.accentChroma + 0.02)} ${t.accentHue + 7})`);
+    }, [t.bgMode, t.accentHue, t.accentChroma]);
+
+    React.useEffect(() => {
+      // headline scaling
+      document.querySelectorAll('.display, .hero-h1, .section-head h2, .final-cta h2, .stat .num, .step::before, .price-amount, .why-left .quote, .service h3, .step h3, .why-item h4, .aud h4, .coach-info h3, .price-name')
+        .forEach(el => { /* font handled via CSS variable below */ });
+      const styleId = '__tweak-overrides';
+      let s = document.getElementById(styleId);
+      if (!s) { s = document.createElement('style'); s.id = styleId; document.head.appendChild(s); }
+      const dispFont = FONT_FAMILIES[t.displayFont] || FONT_FAMILIES["Anton"];
+      const bodyFont = FONT_FAMILIES[t.bodyFont] || FONT_FAMILIES["Inter"];
+      const scale = t.headlineSize / 100;
+      s.textContent = `
+        body { font-family: ${bodyFont} !important; }
+        .display, .hero-h1, .section-head h2, .final-cta h2, .stat .num,
+        .price-amount, .why-left .quote, .service h3, .step h3,
+        .why-item h4, .aud h4, .coach-info h3, .price-name, .ticker-item, .logo, .hero-meta-item .val, .urgency-badge, .step::before {
+          font-family: ${dispFont} !important;
+        }
+        .hero-h1 { font-size: clamp(${38*scale}px, ${7.3*scale}vw, ${112*scale}px) !important; }
+        .section-head h2 { font-size: clamp(${40*scale}px, ${7*scale}vw, ${96*scale}px) !important; }
+        .final-cta h2 { font-size: clamp(${56*scale}px, ${12*scale}vw, ${180*scale}px) !important; }
+        .ticker-track { animation-duration: ${t.tickerSpeed}s !important; }
+        ${!t.showTicker ? '.ticker { display: none !important; }' : ''}
+        ${!t.showAudiences ? 'section.section[style*="padding-top: 0"] .audiences-grid, section.section[style*="padding-top: 0"] .section-head:has(+ .audiences-grid), .audiences-grid { } ' : ''}
+        ${!t.showStats ? '.stats { display: none !important; }' : ''}
+      `;
+    }, [t.displayFont, t.bodyFont, t.headlineSize, t.tickerSpeed, t.showTicker, t.showStats]);
+
+    React.useEffect(() => {
+      const h1 = document.querySelector('.hero-h1');
+      if (h1) {
+        const lines = t.heroHeadline.split('\n');
+        const lastIdx = lines.length - 1;
+        const renderLine = (line, isLast) => {
+          // Rotator syntax: {a|b|c|d}
+          const rm = line.match(/^(.*?)\{([^}]+)\}(.*)$/);
+          if (rm) {
+            const before = rm[1];
+            const words = rm[2].split('|').map(w => w.trim()).filter(Boolean);
+            const after = rm[3];
+            const spans = words.map((w, i) => `<span style="--i:${i}">${w}</span>`).join('');
+            return `${before}<span class="accent rotator" style="--rot-count:${words.length}">${spans}</span>${after}`;
+          }
+          if (isLast) {
+            const m = line.match(/^(.*?)(\b\w+\.?)$/);
+            if (m) return `${m[1]}<span class="accent">${m[2]}</span>`;
+          }
+          return line;
+        };
+        h1.innerHTML = lines.map((l, i) => renderLine(l, i === lastIdx)).join('<br>');
+      }
+      const sub = document.querySelector('.hero-sub');
+      if (sub) {
+        // wrap " · " separators in dot-sep spans for accent color
+        const escaped = t.heroSub.replace(/[&<>]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;'}[c]));
+        sub.innerHTML = escaped.replace(/ ([·•|]) /g, ' <span class="dot-sep">$1</span> ');
+      }
+      const cta = document.querySelector('.btn-primary');
+      if (cta) {
+        const arrow = cta.querySelector('.arrow');
+        cta.childNodes[0].nodeValue = '\n        ' + t.ctaText + '\n        ';
+        if (!arrow) {
+          const sp = document.createElement('span');
+          sp.className = 'arrow';
+          sp.textContent = '→';
+          cta.appendChild(sp);
+        }
+      }
+      const urg = document.querySelector('.urgency-badge span:last-child');
+      if (urg) urg.textContent = t.urgencyText;
+    }, [t.heroHeadline, t.heroSub, t.ctaText, t.urgencyText]);
+
+    React.useEffect(() => {
+      const audSection = [...document.querySelectorAll('section.section')].find(s => s.querySelector('.audiences-grid'));
+      if (audSection) audSection.style.display = t.showAudiences ? '' : 'none';
+    }, [t.showAudiences]);
+
+    return (
+      <TweaksPanel title="Tweaks">
+        <TweakSection label="Brand color" />
+        <TweakSlider label="Hue" value={t.accentHue} min={0} max={360} step={1} unit="°"
+                     onChange={(v) => setTweak('accentHue', v)} />
+        <TweakSlider label="Chroma" value={t.accentChroma} min={0.05} max={0.28} step={0.01}
+                     onChange={(v) => setTweak('accentChroma', v)} />
+        <TweakRadio label="Background"
+                    value={t.bgMode}
+                    options={['near-black', 'deep-charcoal', 'ink-blue']}
+                    onChange={(v) => setTweak('bgMode', v)} />
+
+        <TweakSection label="Type" />
+        <TweakSelect label="Display font" value={t.displayFont}
+                     options={['Anton', 'Bebas Neue', 'Oswald']}
+                     onChange={(v) => setTweak('displayFont', v)} />
+        <TweakSelect label="Body font" value={t.bodyFont}
+                     options={['Inter', 'Space Grotesk', 'IBM Plex Sans']}
+                     onChange={(v) => setTweak('bodyFont', v)} />
+        <TweakSlider label="Headline scale" value={t.headlineSize} min={70} max={130} step={5} unit="%"
+                     onChange={(v) => setTweak('headlineSize', v)} />
+
+        <TweakSection label="Hero copy" />
+        <TweakText label="Headline" value={t.heroHeadline} multiline rows={2}
+                   onChange={(v) => setTweak('heroHeadline', v)} />
+        <TweakText label="Subheadline" value={t.heroSub} multiline rows={3}
+                   onChange={(v) => setTweak('heroSub', v)} />
+        <TweakText label="Primary CTA" value={t.ctaText}
+                   onChange={(v) => setTweak('ctaText', v)} />
+        <TweakText label="Urgency badge" value={t.urgencyText}
+                   onChange={(v) => setTweak('urgencyText', v)} />
+
+        <TweakSection label="Sections" />
+        <TweakToggle label="Show stats bar" value={t.showStats}
+                     onChange={(v) => setTweak('showStats', v)} />
+        <TweakToggle label="Show ticker" value={t.showTicker}
+                     onChange={(v) => setTweak('showTicker', v)} />
+        <TweakToggle label="Show 'Who trains here'" value={t.showAudiences}
+                     onChange={(v) => setTweak('showAudiences', v)} />
+        <TweakSlider label="Ticker speed" value={t.tickerSpeed} min={10} max={60} step={2} unit="s"
+                     onChange={(v) => setTweak('tickerSpeed', v)} />
+      </TweaksPanel>
+    );
+  }
+
+  ReactDOM.createRoot(document.getElementById('tweaks-root')).render(<App />);
+</script>
+
+<script src="shared.js"></script>
+
+</body>
+</html>
