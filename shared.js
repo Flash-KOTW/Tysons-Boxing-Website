@@ -27,12 +27,24 @@ document.querySelectorAll('.section, .testimonials, .stats, .how, .final-cta, .p
   _io.observe(el);
 });
 
-// Duplicate testimonial cards so the marquee loops seamlessly
+// Duplicate testimonial cards so the marquee loops seamlessly (desktop only)
 (function(){
   const track = document.getElementById('testimonialTrack');
   if (!track) return;
   const originals = [...track.children];
-  originals.forEach(card => track.appendChild(card.cloneNode(true)));
+  // On mobile we use a swipe slider — skip cloning so only real cards show
+  if (window.innerWidth > 600) {
+    originals.forEach(card => track.appendChild(card.cloneNode(true)));
+  }
+  // Re-evaluate on resize (e.g. orientation change)
+  window.addEventListener('resize', () => {
+    const clones = [...track.children].filter((_, i) => i >= originals.length);
+    if (window.innerWidth > 600 && clones.length === 0) {
+      originals.forEach(card => track.appendChild(card.cloneNode(true)));
+    } else if (window.innerWidth <= 600 && clones.length > 0) {
+      clones.forEach(c => c.remove());
+    }
+  }, { passive: true });
 })();
 
 // Kickstart hero video on mobile — iOS Safari sometimes refuses to autoplay

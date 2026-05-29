@@ -449,6 +449,47 @@ h1.hero-h1 {
   .testimonial-marquee { --speed: 80s; }
 }
 
+@media (max-width: 600px) {
+  /* Switch from auto-scrolling marquee to manual swipe slider */
+  .testimonial-marquee {
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    scroll-snap-type: x mandatory;
+    scroll-padding: 20px;
+  }
+  /* Hide fade edges — they eat the cards at this width */
+  .testimonial-marquee::before,
+  .testimonial-marquee::after { display: none; }
+  .testimonial-track {
+    animation: none;
+    width: auto;
+    display: flex;
+    padding: 0 20px;
+    gap: 16px;
+  }
+  /* Show only the original set — JS duplicates for the loop, hide the clones */
+  .testimonial-track .testimonial:nth-child(n+4) { display: none; }
+  .testimonial {
+    flex: 0 0 calc(100vw - 56px);
+    scroll-snap-align: start;
+    padding: 32px 24px;
+  }
+  /* Dot indicators */
+  .testimonial-marquee::after {
+    display: flex; align-items: center; justify-content: center;
+    gap: 8px; position: static;
+    background: none; width: auto;
+    padding: 16px 0 4px;
+  }
+  .google-link-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px;
+  }
+}
+
 /* ===== SERVICES ===== */
 .services-grid {
   display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
