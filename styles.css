@@ -95,7 +95,7 @@ nav.top {
   min-width: 100%; min-height: 100%;
   object-fit: cover;
   z-index: 0;
-  filter: grayscale(0.4) contrast(1.05) brightness(0.55);
+  filter: grayscale(0.4) contrast(1.05) brightness(0.72);
 }
 .hero-bg {
   position: absolute; inset: 0;
