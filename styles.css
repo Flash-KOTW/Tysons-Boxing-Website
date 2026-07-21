@@ -368,7 +368,7 @@ h1.hero-h1 {
   overflow: hidden;
   border-top: 1px solid var(--line);
   border-bottom: 1px solid var(--line);
-  --speed: 60s;
+  --speed: 30s;
 }
 .testimonial-marquee::before,
 .testimonial-marquee::after {
@@ -383,7 +383,6 @@ h1.hero-h1 {
   width: max-content;
   animation: testimonial-scroll var(--speed) linear infinite;
 }
-.testimonial-marquee:hover .testimonial-track { animation-play-state: paused; }
 @keyframes testimonial-scroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
@@ -449,7 +448,7 @@ h1.hero-h1 {
   .testimonial { flex: 0 0 320px; padding: 36px 28px; }
   .testimonial-marquee::before,
   .testimonial-marquee::after { width: 60px; }
-  .testimonial-marquee { --speed: 80s; }
+  .testimonial-marquee { --speed: 40s; }
 }
 
 @media (max-width: 600px) {
