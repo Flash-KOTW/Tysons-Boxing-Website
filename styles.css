@@ -1017,6 +1017,60 @@ footer {
   .faq-grid { grid-template-columns: 1fr; }
 }
 
+/* ===== SHOP ===== */
+.shop-note {
+  display: flex; align-items: center; gap: 14px;
+  background: var(--bg-2); border: 1px solid var(--line);
+  padding: 20px 24px; margin-bottom: 56px;
+  font-size: 15px; color: var(--fg-dim); line-height: 1.5;
+}
+.shop-note strong { color: var(--fg); }
+.shop-note .dot {
+  flex-shrink: 0;
+  width: 8px; height: 8px; background: var(--accent); border-radius: 50%;
+}
+.shop-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px;
+  background: var(--line); border: 1px solid var(--line);
+}
+.shop-item { background: var(--bg); display: flex; flex-direction: column; }
+.shop-img {
+  aspect-ratio: 1 / 1;
+  display: flex; align-items: center; justify-content: center;
+  background:
+    repeating-linear-gradient(135deg, #161616 0px, #161616 2px, #0e0e0e 2px, #0e0e0e 12px);
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.shop-img .placeholder-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: rgba(245,240,232,0.35);
+  text-align: center;
+  padding: 0 20px;
+}
+.shop-info { padding: 28px 24px; flex: 1; display: flex; flex-direction: column; }
+.shop-info h3 {
+  font-family: 'Anton', sans-serif; font-size: 26px;
+  text-transform: uppercase; letter-spacing: -0.005em;
+  margin-bottom: 10px;
+}
+.shop-info p { color: var(--fg-dim); font-size: 14px; line-height: 1.55; margin-bottom: 16px; }
+.shop-stock {
+  align-self: flex-start; margin-top: auto;
+  display: inline-flex; align-items: center; gap: 8px;
+  font-family: 'JetBrains Mono', monospace; font-size: 11px;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--fg-dim);
+}
+.shop-stock::before {
+  content: ""; width: 6px; height: 6px; border-radius: 50%;
+  background: var(--accent);
+}
+@media (max-width: 880px) { .shop-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .shop-grid { grid-template-columns: 1fr; } }
+
 /* ===== HOURS ===== */
 .hours-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
 .hours-list li {
